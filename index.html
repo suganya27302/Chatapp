@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat app</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"></script>
+    <link href="./CSS/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="login-page">
+      <div id="join-window" class="join-window">
+        <div class="heading-content">
+          <h2 class="title-content">Talk Now</h2>
+          <img src="ASSETS\chat.png" class="chat-image" />
+        </div>
+        <div class="entry-info">
+          <div class="user-info">
+            <input
+              type="text"
+              id="handle"
+              class="handle-content"
+              placeholder="Enter your name "
+            />
+            <button id="join-button" class="join-button">
+              <img src="ASSETS/join.png" class="join-image" />
+            </button>
+          </div>
+          <h2 class="welcome-content">
+            Most people are nice , you just have a chat!
+          </h2>
+        </div>
+      </div>
+      <div  id="chat-window" class="chat-window">
+        <p id="joined-prompt" class="joined-prompt"></p>
+        <div>
+        <div>
+          <h2 class="title-content">Talk Now</h2>
+          <img src="ASSETS\chat.png" class="chat-image" />
+        </div>
+        <div class="chat-space">
+          <div>
+            <div class="top-section">
+              <p id ="nameofuser" class="nameofuser"></p>
+              <em id="type-message" class="type-message"></em>
+              <button id="leave-chat" class="leave-chat">Leave</button>
+            </div>
+            <div class="chat-area">
+              <div id="output" class="output-box">
+              </div>
+            </div>
+            <div class ="message-handler">
+              <div> <input
+                type="text"
+                id="message"
+                class="message-content"
+                placeholder="Type the message.."
+                autocomplete="off"
+              /></div>
+          <button id="send-button" class="send-button"><img src="ASSETS/send.png" class="send-image"/>
+          </button>
+          <button id="online-users" class="online-users">View Online Users</button>
+            </div>
+           <div id="show-users" class="show-users">
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    </body>
+  
+    </div>
+    
+  <script src="./JAVASCRIPT/chat.js"></script>
+</html>
